@@ -105,8 +105,8 @@
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 				<button type="default" data-index="8" @click="clickPlayVideo">Focus To Body</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
-				<button type="default" data-index="9" @click="clickPlayVideo">Focus To Bust</button>
-				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
+<!-- 				<button type="default" data-index="9" @click="clickPlayVideo">Focus To Bust</button>
+				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view> -->
 				<button type="default" data-index="1" @click="clickPlayVideo">Play Video1</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 				<button type="default" data-index="2" @click="clickPlayVideo">Play Video2</button>

@@ -514,7 +514,7 @@ var render = function () {
                               src: _vm._$s(
                                 22,
                                 "a-src",
-                                __webpack_require__(/*! ../../static/thinking.gif */ 35)
+                                __webpack_require__(/*! ../../static/thinking.gif */ 36)
                               ),
                               _i: 22,
                             },
@@ -590,7 +590,7 @@ var render = function () {
                               src: _vm._$s(
                                 29,
                                 "a-src",
-                                __webpack_require__(/*! ../../static/icon-robot2.jpg */ 36)
+                                __webpack_require__(/*! ../../static/icon-robot2.jpg */ 35)
                               ),
                               _i: 29,
                             },
@@ -613,7 +613,7 @@ var render = function () {
                               src: _vm._$s(
                                 32,
                                 "a-src",
-                                __webpack_require__(/*! ../../static/thinking.gif */ 35)
+                                __webpack_require__(/*! ../../static/thinking.gif */ 36)
                               ),
                               _i: 32,
                             },
@@ -666,7 +666,7 @@ var render = function () {
                                   src: _vm._$s(
                                     "35-" + $30,
                                     "a-src",
-                                    __webpack_require__(/*! ../../static/icon-robot2.jpg */ 36)
+                                    __webpack_require__(/*! ../../static/icon-robot2.jpg */ 35)
                                   ),
                                   _i: "35-" + $30,
                                 },
@@ -937,24 +937,16 @@ var render = function () {
               }),
               _c("button", {
                 attrs: { _i: 62 },
-                on: { click: _vm.clickPlayVideo },
-              }),
-              _c("view", {
-                staticClass: _vm._$s(63, "sc", "_line"),
-                attrs: { _i: 63 },
-              }),
-              _c("button", {
-                attrs: { _i: 64 },
                 on: { click: _vm.clickLinkServices },
               }),
             ]
           ),
           _c(
             "view",
-            { staticClass: _vm._$s(65, "sc", "cannelBtn"), attrs: { _i: 65 } },
+            { staticClass: _vm._$s(63, "sc", "cannelBtn"), attrs: { _i: 63 } },
             [
               _c("button", {
-                attrs: { _i: 66 },
+                attrs: { _i: 64 },
                 on: { click: _vm.clickHidePopup },
               }),
             ]
@@ -968,43 +960,43 @@ var render = function () {
           attrs: {
             type: "center",
             "mask-background-color": "rgba(0,0,0,0.7)",
-            _i: 67,
+            _i: 65,
           },
         },
         [
           _c(
             "view",
             {
-              staticClass: _vm._$s(68, "sc", "popupWSSMain"),
-              attrs: { _i: 68 },
+              staticClass: _vm._$s(66, "sc", "popupWSSMain"),
+              attrs: { _i: 66 },
             },
             [
               _c("input", {
                 attrs: {
                   id: "",
-                  value: _vm._$s(69, "a-value", _vm.WSSUrl),
-                  _i: 69,
+                  value: _vm._$s(67, "a-value", _vm.WSSUrl),
+                  _i: 67,
                 },
                 on: { input: _vm.inputWSS },
               }),
               _c("button", {
-                attrs: { _i: 70 },
+                attrs: { _i: 68 },
                 on: { click: _vm.disconnectWSS },
               }),
               _c("button", {
-                attrs: { _i: 71 },
+                attrs: { _i: 69 },
                 on: { click: _vm.clickHidePopupWSS },
               }),
               _c("button", {
-                attrs: { _i: 72 },
+                attrs: { _i: 70 },
                 on: { click: _vm.connectWSS },
               }),
               _c("view", [
                 _c("text"),
                 _c("switch", {
                   attrs: {
-                    checked: _vm._$s(75, "a-checked", _vm.language),
-                    _i: 75,
+                    checked: _vm._$s(73, "a-checked", _vm.language),
+                    _i: 73,
                   },
                   on: { change: _vm.languageSwitch },
                 }),
@@ -1608,23 +1600,23 @@ eval("module.exports = \"/static/icon-headimg.png\";//# sourceURL=[module]\n//# 
 
 /***/ }),
 /* 35 */
-/*!************************************************!*\
-  !*** D:/Develop/ASIA-test/static/thinking.gif ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = \"/static/thinking.gif\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBcIi9zdGF0aWMvdGhpbmtpbmcuZ2lmXCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///35\n");
-
-/***/ }),
-/* 36 */
 /*!***************************************************!*\
   !*** D:/Develop/ASIA-test/static/icon-robot2.jpg ***!
   \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"/static/icon-robot2.jpg\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjM2LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBcIi9zdGF0aWMvaWNvbi1yb2JvdDIuanBnXCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///36\n");
+eval("module.exports = \"/static/icon-robot2.jpg\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBcIi9zdGF0aWMvaWNvbi1yb2JvdDIuanBnXCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///35\n");
+
+/***/ }),
+/* 36 */
+/*!************************************************!*\
+  !*** D:/Develop/ASIA-test/static/thinking.gif ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"/static/thinking.gif\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjM2LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBcIi9zdGF0aWMvdGhpbmtpbmcuZ2lmXCI7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///36\n");
 
 /***/ }),
 /* 37 */
