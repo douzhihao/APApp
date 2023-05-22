@@ -775,14 +775,14 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "9", _i: 56 },
+                  attrs: { type: "default", "data-index": "1", _i: 56 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Focus To Bust")]
+                [_vm._v("Play Video1")]
               ),
               _c("uni-view", {
                 staticClass: _vm._$g(57, "sc"),
@@ -796,14 +796,14 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "1", _i: 58 },
+                  attrs: { type: "default", "data-index": "2", _i: 58 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Play Video1")]
+                [_vm._v("Play Video2")]
               ),
               _c("uni-view", {
                 staticClass: _vm._$g(59, "sc"),
@@ -817,14 +817,14 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "2", _i: 60 },
+                  attrs: { type: "default", "data-index": "3", _i: 60 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Play Video2")]
+                [_vm._v("Play Background")]
               ),
               _c("uni-view", {
                 staticClass: _vm._$g(61, "sc"),
@@ -838,28 +838,7 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "3", _i: 62 },
-                  on: {
-                    click: function ($event) {
-                      return _vm.$handleViewEvent($event)
-                    },
-                  },
-                },
-                [_vm._v("Play Background")]
-              ),
-              _c("uni-view", {
-                staticClass: _vm._$g(63, "sc"),
-                staticStyle: {
-                  width: "100%",
-                  height: "1px",
-                  "background-color": "#3a3a3a",
-                },
-                attrs: { _i: 63 },
-              }),
-              _c(
-                "v-uni-button",
-                {
-                  attrs: { type: "default", _i: 64 },
+                  attrs: { type: "default", _i: 62 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -873,12 +852,12 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(65, "sc"), attrs: { _i: 65 } },
+            { staticClass: _vm._$g(63, "sc"), attrs: { _i: 63 } },
             [
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", _i: 66 },
+                  attrs: { type: "default", _i: 64 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -895,20 +874,20 @@ var render = function () {
       ),
       _c(
         "uni-popup",
-        { ref: "popupWSS", attrs: { _i: 67 } },
+        { ref: "popupWSS", attrs: { _i: 65 } },
         [
           _c(
             "uni-view",
-            { staticClass: _vm._$g(68, "sc"), attrs: { _i: 68 } },
+            { staticClass: _vm._$g(66, "sc"), attrs: { _i: 66 } },
             [
               _c("v-uni-input", {
                 attrs: {
                   type: "text",
                   name: "",
                   id: "",
-                  value: _vm._$g(69, "a-value"),
+                  value: _vm._$g(67, "a-value"),
                   placeholder: "wss://**.**.***.**",
-                  _i: 69,
+                  _i: 67,
                 },
                 on: {
                   input: function ($event) {
@@ -919,7 +898,7 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "warn", plain: "true", _i: 70 },
+                  attrs: { type: "warn", plain: "true", _i: 68 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -931,7 +910,7 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", plain: "true", _i: 71 },
+                  attrs: { type: "default", plain: "true", _i: 69 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -943,7 +922,7 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "primary", plain: "true", _i: 72 },
+                  attrs: { type: "primary", plain: "true", _i: 70 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -954,18 +933,18 @@ var render = function () {
               ),
               _c(
                 "uni-view",
-                { staticStyle: { "margin-top": "20rpx" }, attrs: { _i: 73 } },
+                { staticStyle: { "margin-top": "20rpx" }, attrs: { _i: 71 } },
                 [
                   _c(
                     "v-uni-text",
                     {
                       staticStyle: { "margin-right": "20rpx" },
-                      attrs: { _i: 74 },
+                      attrs: { _i: 72 },
                     },
                     [_vm._v("CN/EN")]
                   ),
                   _c("v-uni-switch", {
-                    attrs: { checked: _vm._$g(75, "a-checked"), _i: 75 },
+                    attrs: { checked: _vm._$g(73, "a-checked"), _i: 73 },
                     on: {
                       change: function ($event) {
                         return _vm.$handleViewEvent($event)
@@ -2040,7 +2019,7 @@ if(false) {}
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../HbuilderX/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 19);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../../HbuilderX/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/lib/app-plus/getUrl.js */ 27);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../static/contentbg.jpg */ 28);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../static/contentbg2.png */ 28);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -2095,13 +2074,13 @@ module.exports = function (url, options) {
 
 /***/ }),
 /* 28 */
-/*!*************************************************!*\
-  !*** D:/Develop/ASIA-test/static/contentbg.jpg ***!
-  \*************************************************/
+/*!**************************************************!*\
+  !*** D:/Develop/ASIA-test/static/contentbg2.png ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/static/contentbg.jpg";
+module.exports = "/static/contentbg2.png";
 
 /***/ }),
 /* 29 */

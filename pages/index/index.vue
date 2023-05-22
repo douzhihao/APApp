@@ -6,13 +6,13 @@
 		</view> -->
 		<view class="custom">
 			<view class="customLeft" @click="clickShowPopupWSS()">
-				<image class="" src="../../static/icon-logo.png" mode="widthFix"></image>
+				<image class="" src="../../static/icon-logo2.png" mode="widthFix"></image>
 				<view class="tipsPoint">
 					<view :class="tipsPoint?'greenPoint':'redPoint'"></view>
 				</view>
 			</view>
 			<view class="customMid">
-				<image class="" src="../../static/icon-title.png" mode="widthFix"></image>
+				<image class="" src="../../static/icon-title2.png" mode="widthFix"></image>
 			</view>
 			<view class="customRight" @click="clickShowPopup()">
 				<view class="optinoPoint"> </view>
@@ -36,23 +36,23 @@
 						</view>
 						<view class="triangle"></view>
 						<view class="headimg">
-							<image src="../../static/icon-headimg.png" mode=""></image>
+							<image src="../../static/icon-headimg2.png" mode=""></image>
 						</view>
 					</view>
 					<view class="userPartList" v-show="!isAsring">
 						<view class="asring">
-							<image src="../../static/thinking.gif" mode="widthFix"></image>
+							<image src="../../static/thinking2.gif" mode="widthFix"></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="headimg">
-							<image src="../../static/icon-headimg.png" mode=""></image>
+							<image src="../../static/icon-headimg2.png" mode=""></image>
 						</view>
 					</view>
 				</view>
 				<view class="robotPart" v-show="showRobotPart">
 					<view v-show="isThinking" class="robotPartList">
 						<view class="headimg">
-							<image src="../../static/icon-robot2.jpg" mode=""></image>
+							<image src="../../static/icon-robot1.png" mode=""></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="thinking">
@@ -62,7 +62,7 @@
 					
 					<view v-show="!isThinking" class="robotPartList" v-for="(item,index) in robotMsgList" :key="index">
 						<view class="headimg">
-							<image src="../../static/icon-robot2.jpg" mode=""></image>
+							<image src="../../static/icon-robot1.png" mode=""></image>
 						</view>
 						<view class="triangle"></view>
 						<view v-for="(item,index) in item.split('>MZsplit<').reverse()" :key="index"  :class="index==1?'sort':'text'">
@@ -105,8 +105,8 @@
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 				<button type="default" data-index="8" @click="clickPlayVideo">Focus To Body</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
-				<button type="default" data-index="9" @click="clickPlayVideo">Focus To Bust</button>
-				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
+		<!-- 		<button type="default" data-index="9" @click="clickPlayVideo">Focus To Bust</button>
+				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view> -->
 				<button type="default" data-index="1" @click="clickPlayVideo">Play Video1</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 				<button type="default" data-index="2" @click="clickPlayVideo">Play Video2</button>
@@ -174,8 +174,8 @@
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://yjwpv79rnsupshsh3.neiwangyun.net',
-				// WSSUrl:'ws://10.10.10.247:3000',
-				WSSUrl:'ws://192.168.0.250:3000',
+				WSSUrl:'ws://10.10.130.17:3000',
+				// WSSUrl:'ws://192.168.0.250:3000',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://54774dq657.zicp.fun',
 				
@@ -607,7 +607,7 @@
 	.contentBg {
 		width: 100vw;
 		height: 100vh;
-		background: url('../../static/contentbg.jpg') no-repeat;
+		background: url('../../static/contentbg2.png') no-repeat;
 		background-size: 100% 100%;
 		position: absolute;
 		z-index: -1;
