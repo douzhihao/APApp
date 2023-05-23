@@ -41,7 +41,7 @@
 					</view>
 					<view class="userPartList" v-show="!isAsring">
 						<view class="asring">
-							<image src="../../static/thinking.gif" mode="widthFix"></image>
+							<image  v-show="!isInvalidAsk" src="../../static/thinking.gif" mode="widthFix"></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="headimg">
@@ -50,6 +50,24 @@
 					</view>
 				</view>
 				<view class="robotPart" v-show="showRobotPart">
+					<view v-show="isInvalidAsk" class="robotPartList">
+						<view class="headimg">
+							<image src="../../static/icon-robot2.jpg" mode=""></image>
+						</view>
+						<view class="triangle"></view>
+						<view class="text">
+							Sorry，Can you say that again?
+						</view>
+					</view>
+					<view v-show="isNetworkError" class="robotPartList">
+						<view class="headimg">
+							<image src="../../static/icon-robot2.jpg" mode=""></image>
+						</view>
+						<view class="triangle"></view>
+						<view class="text">
+							I'm sorry, my network seems to be affected. Please try again later
+						</view>
+					</view>
 					<view v-show="isThinking" class="robotPartList">
 						<view class="headimg">
 							<image src="../../static/icon-robot2.jpg" mode=""></image>
@@ -170,6 +188,8 @@
 
 				isLangTap: false,
 				isThinking:false,
+				isInvalidAsk:false,
+				isNetworkError:false,
 				isAsring:false,
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
@@ -268,24 +288,45 @@
 							name: 'multipartFile',   
 							success: (res)=>{
 								let _data = JSON.parse(res.data);
-								console.log(_data,_data.data,_data.data.length,_data.data!=="")
-								if(_data.data||_data.data.length>0||_data.data!==""){
-									that.userMsg = _data.data;
-									that.showUserPart = true;
-									that.isAsring = true;
-									that.showRobotPart = true;
-									that.isThinking = true;
-									// console.log(that.userMsg,JSON.parse(res.data),"----------");
-									that.sendSocketMessage(JSON.stringify({ ask: _data.data}));
+								console.log(res,_data);
+								// console.log(_data,_data.data,_data.data.length,_data.data!=="")
+								if(res.statusCode == 200){
+									
+									// if(_data.data||_data.data.length>0||_data.data!==""){
+									if(_data.data){
+										console.log("ASR READY")
+										that.userMsg = _data.data;
+										that.showUserPart = true;
+										that.isAsring = true;
+										that.showRobotPart = true;
+										that.isThinking = true;
+										that.isInvalidAsk = false;
+										uni.showLoading({
+											title: 'Wait a moment'
+										})
+										// console.log(that.userMsg,JSON.parse(res.data),"----------");
+										that.sendSocketMessage(JSON.stringify({ ask: _data.data}));
+									}else{
+										console.log("ASR ERROR")
+										// that.showUserPart = false;
+										// that.isAsring = false;
+										
+										// uni.showToast({
+										// 	title: 'please say again?',
+										// 	icon: 'error',
+										// 	duration: 2000
+										// });
+										that.showRobotPart = true;
+										that.isInvalidAsk = true;
+										// that.isThinking = true;
+										
+									}
 								}else{
-									that.showUserPart = false;
-									that.isAsring = false;
-									uni.showToast({
-										title: '未采集到声音',
-										icon: 'error',
-										duration: 2000
-									});
+									that.showRobotPart = true;
+									that.isNetworkError = true;
+									// console.log("statusCode "+res.statusCode)
 								}
+
 							},
 							fail:(res)=> {
 								console.log(res);
@@ -328,6 +369,8 @@
 					console.log(_msg.answer);
 					that.showRobotPart = true;
 					that.isThinking = false;
+					that.isInvalidAsk = false;
+					uni.hideLoading();
 					// that.robotMsg = that.robotMsg + _msg.answer ;
 					
 					// let rich_text = "<div>"+_msg.answer+"</div>"
@@ -471,8 +514,13 @@
 			clickPlayVideo(e) {
 				// console.log(e.currentTarget.dataset.index);
 				this.clickHidePopup();
-				this.sendSocketMessage(JSON.stringify({close: 'close'}));
-				this.sendSocketMessage(JSON.stringify({sence: e.currentTarget.dataset.index}));
+
+				if(e.currentTarget.dataset.index == 7||e.currentTarget.dataset.index ==8){
+					this.sendSocketMessage(JSON.stringify({sence: e.currentTarget.dataset.index}));
+				}else{
+					this.sendSocketMessage(JSON.stringify({close: 'close'}));
+					this.sendSocketMessage(JSON.stringify({sence: e.currentTarget.dataset.index}));
+				}
 			},
 			clickPlayAudio(e) {
 				// console.log(e.currentTarget.dataset.index);
@@ -498,6 +546,8 @@
 					that.showRobotPart = false;
 					that.isLangTap = true;
 					that.isThinking = false;
+					that.isInvalidAsk = false;
+					uni.hideLoading();
 					that.userMsg = '';
 					that.robotMsg = '';
 					that.robotMsgList = [];
@@ -547,7 +597,7 @@
 					that.recorder.stop();
 					that.showUserPart = true;
 					that.isAsring = false;
-					console.info('进来了？？？');
+					// console.info('进来了？？？');
 					that.isLangTap = false;
 				} else {
 					// 此时松手后响应的是取消录音
