@@ -41,7 +41,7 @@
 					</view>
 					<view class="userPartList" v-show="!isAsring">
 						<view class="asring">
-							<image src="../../static/thinking2.gif" mode="widthFix"></image>
+							<image  v-show="!isInvalidAsk" src="../../static/thinking2.gif" mode="widthFix"></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="headimg">
@@ -50,6 +50,26 @@
 					</view>
 				</view>
 				<view class="robotPart" v-show="showRobotPart">
+					<view v-show="isInvalidAsk" class="robotPartList">
+						<view class="headimg">
+							<image src="../../static/icon-robot2.jpg" mode=""></image>
+						</view>
+						<view class="triangle"></view>
+						<view class="text">
+							<!-- Sorry，Can you say that again? 不好意思您能再说一次么？ -->
+							不好意思您能再说一次么？
+						</view>
+					</view>
+					<view v-show="isNetworkError" class="robotPartList">
+						<view class="headimg">
+							<image src="../../static/icon-robot2.jpg" mode=""></image>
+						</view>
+						<view class="triangle"></view>
+						<view class="text">
+							<!-- I'm sorry, my network seems to be affected. Please try again later -->
+							我很抱歉，我的网络似乎受到了影响，请您稍后再试
+						</view>
+					</view>
 					<view v-show="isThinking" class="robotPartList">
 						<view class="headimg">
 							<image src="../../static/icon-robot1.png" mode=""></image>
@@ -74,7 +94,7 @@
 			<view class="inputWav">
 				<view class="inputTipsSlide" v-show="recording">
 					<view class="slideMain">
-						Slide up Clear
+						上滑取消发送
 						<image src="../../static/icon-arrow.png" mode="widthFix"></image>
 					</view>
 				</view>
@@ -90,10 +110,10 @@
 
 					</view>
 					<view class="inputTipsHold" v-show="!recording">
-						Hold to Talk
+						长按 讲话
 					</view>
 					<view class="inputTipsRelease" v-show="recording">
-						Release and Send
+						松开 发送
 					</view>
 				</view>
 			</view>
@@ -101,36 +121,36 @@
 
 		<uni-popup ref="popup" type="bottom" mask-background-color=rgba(0,0,0,0.7)>
 			<view class="optionBtn">
-				<button type="default" data-index="7" @click="clickPlayVideo">Focus To Face</button>
+				<button type="default" data-index="7" @click="clickPlayVideo">切换到面部</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
-				<button type="default" data-index="8" @click="clickPlayVideo">Focus To Body</button>
+				<button type="default" data-index="8" @click="clickPlayVideo">切换到身体</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 		<!-- 		<button type="default" data-index="9" @click="clickPlayVideo">Focus To Bust</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view> -->
-				<button type="default" data-index="1" @click="clickPlayVideo">Play Video1</button>
+				<button type="default" data-index="1" @click="clickPlayVideo">播放视频1</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
-				<button type="default" data-index="2" @click="clickPlayVideo">Play Video2</button>
+				<button type="default" data-index="2" @click="clickPlayVideo">播放视频2</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
 				<!-- 				<button type="default" data-index="3" @click="clickPlayVideo">Play Video3</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view> -->
 				<!-- 				<button type="default" data-index="4" @click="clickPlayVideo">Play Background</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view> -->
-				<button type="default" data-index="3" @click="clickPlayVideo">Play Background</button>
+				<button type="default" data-index="3" @click="clickPlayVideo">切换到背景</button>
 				<view class="_line" style="width: 100%;height: 1px;background-color: #3a3a3a;"></view>
-				<button type="default" @click="clickLinkServices">Reset Background</button>
+				<button type="default" @click="clickLinkServices">重置背景</button>
 			</view>
 			<view class="cannelBtn">
-				<button type="default" @click="clickHidePopup">Cancel</button>
+				<button type="default" @click="clickHidePopup">取消</button>
 			</view>
 		</uni-popup>
 		<uni-popup ref="popupWSS" type="center" mask-background-color=rgba(0,0,0,0.7)>
 			<view class="popupWSSMain">
 				<input type="text" name="" id="" @input="inputWSS" :value="WSSUrl" placeholder="wss://**.**.***.**">
-				<button type="warn" plain="true" @click="disconnectWSS">disconnect</button>
-				<button type="default" plain="true" @click="clickHidePopupWSS">cancel</button>
-				<button type="primary" plain="true" @click="connectWSS">connect</button>
+				<button type="warn" plain="true" @click="disconnectWSS">断开连接</button>
+				<button type="default" plain="true" @click="clickHidePopupWSS">取消</button>
+				<button type="primary" plain="true" @click="connectWSS">连接</button>
 				<view style="margin-top: 20rpx;">
-					<text style="margin-right: 20rpx;">CN/EN</text>  <switch :checked="language" @change="languageSwitch" />
+					<text style="margin-right: 20rpx;">英文/中文</text>  <switch :checked="language" @change="languageSwitch" />
 				</view>
 			</view>
 		</uni-popup>
@@ -170,6 +190,8 @@
 
 				isLangTap: false,
 				isThinking:false,
+				isInvalidAsk:false,
+				isNetworkError:false,
 				isAsring:false,
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
@@ -187,7 +209,7 @@
 				
 				language:true,
 				// langugeType:'recognition'
-				langugeType:'en-US'
+				langugeType:'zh-CN'
 			}
 		},
 		onLoad() {
@@ -268,23 +290,43 @@
 							name: 'multipartFile',   
 							success: (res)=>{
 								let _data = JSON.parse(res.data);
-								console.log(_data,_data.data,_data.data.length,_data.data!=="")
-								if(_data.data||_data.data.length>0||_data.data!==""){
-									that.userMsg = _data.data;
-									that.showUserPart = true;
-									that.isAsring = true;
-									that.showRobotPart = true;
-									that.isThinking = true;
-									// console.log(that.userMsg,JSON.parse(res.data),"----------");
-									that.sendSocketMessage(JSON.stringify({ ask: _data.data}));
+								console.log(res,_data);
+								// console.log(_data,_data.data,_data.data.length,_data.data!=="")
+								if(res.statusCode == 200){
+									
+									// if(_data.data||_data.data.length>0||_data.data!==""){
+									if(_data.data){
+										console.log("ASR READY")
+										that.userMsg = _data.data;
+										that.showUserPart = true;
+										that.isAsring = true;
+										that.showRobotPart = true;
+										that.isThinking = true;
+										that.isInvalidAsk = false;
+										uni.showLoading({
+											title: '请稍等...'
+										})
+										// console.log(that.userMsg,JSON.parse(res.data),"----------");
+										that.sendSocketMessage(JSON.stringify({ ask: _data.data}));
+									}else{
+										console.log("ASR ERROR")
+										// that.showUserPart = false;
+										// that.isAsring = false;
+										
+										// uni.showToast({
+										// 	title: 'please say again?',
+										// 	icon: 'error',
+										// 	duration: 2000
+										// });
+										that.showRobotPart = true;
+										that.isInvalidAsk = true;
+										// that.isThinking = true;
+										
+									}
 								}else{
-									that.showUserPart = false;
-									that.isAsring = false;
-									uni.showToast({
-										title: '未采集到声音',
-										icon: 'error',
-										duration: 2000
-									});
+									that.showRobotPart = true;
+									that.isNetworkError = true;
+									// console.log("statusCode "+res.statusCode)
 								}
 							},
 							fail:(res)=> {
@@ -305,7 +347,7 @@
 				that.tipsPoint = true;
 				that.socketOpen = true;
 				let socktTimer = setInterval(function(){
-					console.log('ping');
+					console.log('ping',that.isInvalidAsk);
 					that.sendSocketMessage(JSON.stringify({ talk_data: 'ping' }))
 				},10000)
 			});
@@ -328,6 +370,8 @@
 					console.log(_msg.answer);
 					that.showRobotPart = true;
 					that.isThinking = false;
+					that.isInvalidAsk = false;
+					uni.hideLoading();
 					// that.robotMsg = that.robotMsg + _msg.answer ;
 					
 					// let rich_text = "<div>"+_msg.answer+"</div>"
@@ -447,11 +491,11 @@
 				if(e.detail.value){
 					this.language = e.detail.value;
 					// this.langugeType='recognition';
-					this.langugeType='en-US';
+					this.langugeType='zh-CN';
 				}else if(!e.detail.value){
 					this.language = e.detail.value
 					// this.langugeType='recognitionCN';
-					this.langugeType='zh-CN';
+					this.langugeType='en-US';
 				}
 			},
 			clickShowPopup() {
@@ -477,8 +521,12 @@
 			clickPlayAudio(e) {
 				// console.log(e.currentTarget.dataset.index);
 				this.clickHidePopup();
-				this.sendSocketMessage(JSON.stringify({close: 'close'}));
-				this.sendSocketMessage(JSON.stringify({audio: e.currentTarget.dataset.index}));
+				if(e.currentTarget.dataset.index == 7||e.currentTarget.dataset.index ==8){
+					this.sendSocketMessage(JSON.stringify({sence: e.currentTarget.dataset.index}));
+				}else{
+					this.sendSocketMessage(JSON.stringify({close: 'close'}));
+					this.sendSocketMessage(JSON.stringify({sence: e.currentTarget.dataset.index}));
+				}
 			},
 			langTap() {
 				let that = this;
@@ -498,6 +546,8 @@
 					that.showRobotPart = false;
 					that.isLangTap = true;
 					that.isThinking = false;
+					that.isInvalidAsk = false;
+					uni.hideLoading();
 					that.userMsg = '';
 					that.robotMsg = '';
 					that.robotMsgList = [];
@@ -511,7 +561,7 @@
 				let that = this;
 
 				// that.clientX = e.changedTouches[0].clientX; //手指按下时的X坐标
-				// that.clientY = e.changedTouches[0].clientY; //手指按下时的Y坐标
+				that.clientY = e.changedTouches[0].clientY; //手指按下时的Y坐标
 				// if(that.isLangTap){
 				// navigator.getUserMedia({
 				// 	audio: true
@@ -526,7 +576,7 @@
 			},
 			touchMove(e) {
 				let touchData = e.touches[0];
-				let moveX = touchData.clientX - this.clientX;
+				// let moveX = touchData.clientX - this.clientX;
 				let moveY = touchData.clientY - this.clientY;
 				if (moveY < -50) {
 					// 向上滑动
@@ -547,7 +597,7 @@
 					that.recorder.stop();
 					that.showUserPart = true;
 					that.isAsring = false;
-					console.info('进来了？？？');
+					// console.info('进来了？？？');
 					that.isLangTap = false;
 				} else {
 					// 此时松手后响应的是取消录音
@@ -839,7 +889,7 @@
 		height: 46rpx;
 		font-size: 25rpx;
 		font-family: San Francisco Display;
-		font-weight: 400;
+		font-weight: bold;
 		color: #A0A0A8;
 		line-height: 74rpx;
 	}

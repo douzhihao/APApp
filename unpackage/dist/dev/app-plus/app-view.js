@@ -419,6 +419,14 @@ var render = function () {
                         { staticClass: _vm._$g(21, "sc"), attrs: { _i: 21 } },
                         [
                           _c("v-uni-image", {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm._$g(22, "v-show"),
+                                expression: "_$g(22,'v-show')",
+                              },
+                            ],
                             attrs: {
                               src: _vm._$g(22, "a-src"),
                               mode: "widthFix",
@@ -503,12 +511,98 @@ var render = function () {
                       _c(
                         "uni-view",
                         { staticClass: _vm._$g(31, "sc"), attrs: { _i: 31 } },
+                        [_vm._v("不好意思您能再说一次么？")]
+                      ),
+                    ],
+                    1
+                  ),
+                  _c(
+                    "uni-view",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm._$g(32, "v-show"),
+                          expression: "_$g(32,'v-show')",
+                        },
+                      ],
+                      staticClass: _vm._$g(32, "sc"),
+                      attrs: { _i: 32 },
+                    },
+                    [
+                      _c(
+                        "uni-view",
+                        { staticClass: _vm._$g(33, "sc"), attrs: { _i: 33 } },
                         [
                           _c("v-uni-image", {
                             attrs: {
-                              src: _vm._$g(32, "a-src"),
+                              src: _vm._$g(34, "a-src"),
+                              mode: "",
+                              _i: 34,
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                      _c("uni-view", {
+                        staticClass: _vm._$g(35, "sc"),
+                        attrs: { _i: 35 },
+                      }),
+                      _c(
+                        "uni-view",
+                        { staticClass: _vm._$g(36, "sc"), attrs: { _i: 36 } },
+                        [
+                          _vm._v(
+                            "我很抱歉，我的网络似乎受到了影响，请您稍后再试"
+                          ),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
+                  _c(
+                    "uni-view",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm._$g(37, "v-show"),
+                          expression: "_$g(37,'v-show')",
+                        },
+                      ],
+                      staticClass: _vm._$g(37, "sc"),
+                      attrs: { _i: 37 },
+                    },
+                    [
+                      _c(
+                        "uni-view",
+                        { staticClass: _vm._$g(38, "sc"), attrs: { _i: 38 } },
+                        [
+                          _c("v-uni-image", {
+                            attrs: {
+                              src: _vm._$g(39, "a-src"),
+                              mode: "",
+                              _i: 39,
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                      _c("uni-view", {
+                        staticClass: _vm._$g(40, "sc"),
+                        attrs: { _i: 40 },
+                      }),
+                      _c(
+                        "uni-view",
+                        { staticClass: _vm._$g(41, "sc"), attrs: { _i: 41 } },
+                        [
+                          _c("v-uni-image", {
+                            attrs: {
+                              src: _vm._$g(42, "a-src"),
                               mode: "widthFix",
-                              _i: 32,
+                              _i: 42,
                             },
                           }),
                         ],
@@ -517,7 +611,7 @@ var render = function () {
                     ],
                     1
                   ),
-                  _vm._l(_vm._$g(33, "f"), function (item, index, $20, $30) {
+                  _vm._l(_vm._$g(43, "f"), function (item, index, $20, $30) {
                     return _c(
                       "uni-view",
                       {
@@ -525,47 +619,47 @@ var render = function () {
                           {
                             name: "show",
                             rawName: "v-show",
-                            value: _vm._$g("33-" + $30, "v-show"),
-                            expression: "_$g((\"33-\"+$30),'v-show')",
+                            value: _vm._$g("43-" + $30, "v-show"),
+                            expression: "_$g((\"43-\"+$30),'v-show')",
                           },
                         ],
                         key: item,
-                        staticClass: _vm._$g("33-" + $30, "sc"),
-                        attrs: { _i: "33-" + $30 },
+                        staticClass: _vm._$g("43-" + $30, "sc"),
+                        attrs: { _i: "43-" + $30 },
                       },
                       [
                         _c(
                           "uni-view",
                           {
-                            staticClass: _vm._$g("34-" + $30, "sc"),
-                            attrs: { _i: "34-" + $30 },
+                            staticClass: _vm._$g("44-" + $30, "sc"),
+                            attrs: { _i: "44-" + $30 },
                           },
                           [
                             _c("v-uni-image", {
                               attrs: {
-                                src: _vm._$g("35-" + $30, "a-src"),
+                                src: _vm._$g("45-" + $30, "a-src"),
                                 mode: "",
-                                _i: "35-" + $30,
+                                _i: "45-" + $30,
                               },
                             }),
                           ],
                           1
                         ),
                         _c("uni-view", {
-                          staticClass: _vm._$g("36-" + $30, "sc"),
-                          attrs: { _i: "36-" + $30 },
+                          staticClass: _vm._$g("46-" + $30, "sc"),
+                          attrs: { _i: "46-" + $30 },
                         }),
                         _vm._l(
-                          _vm._$g(37 + "-" + $30, "f"),
+                          _vm._$g(47 + "-" + $30, "f"),
                           function (item, index, $21, $31) {
                             return _c(
                               "uni-view",
                               {
                                 key: item,
-                                class: _vm._$g("37-" + $30 + "-" + $31, "c"),
-                                attrs: { _i: "37-" + $30 + "-" + $31 },
+                                class: _vm._$g("47-" + $30 + "-" + $31, "c"),
+                                attrs: { _i: "47-" + $30 + "-" + $31 },
                               },
-                              [_vm._v(_vm._$g("37-" + $30 + "-" + $31, "t0-0"))]
+                              [_vm._v(_vm._$g("47-" + $30 + "-" + $31, "t0-0"))]
                             )
                           }
                         ),
@@ -581,7 +675,7 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(38, "sc"), attrs: { _i: 38 } },
+            { staticClass: _vm._$g(48, "sc"), attrs: { _i: 48 } },
             [
               _c(
                 "uni-view",
@@ -590,24 +684,24 @@ var render = function () {
                     {
                       name: "show",
                       rawName: "v-show",
-                      value: _vm._$g(39, "v-show"),
-                      expression: "_$g(39,'v-show')",
+                      value: _vm._$g(49, "v-show"),
+                      expression: "_$g(49,'v-show')",
                     },
                   ],
-                  staticClass: _vm._$g(39, "sc"),
-                  attrs: { _i: 39 },
+                  staticClass: _vm._$g(49, "sc"),
+                  attrs: { _i: 49 },
                 },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(40, "sc"), attrs: { _i: 40 } },
+                    { staticClass: _vm._$g(50, "sc"), attrs: { _i: 50 } },
                     [
-                      _vm._v("Slide up Clear"),
+                      _vm._v("上滑取消发送"),
                       _c("v-uni-image", {
                         attrs: {
-                          src: _vm._$g(41, "a-src"),
+                          src: _vm._$g(51, "a-src"),
                           mode: "widthFix",
-                          _i: 41,
+                          _i: 51,
                         },
                       }),
                     ],
@@ -618,13 +712,13 @@ var render = function () {
               ),
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(42, "sc"), attrs: { _i: 42 } },
+                { staticClass: _vm._$g(52, "sc"), attrs: { _i: 52 } },
                 [
                   _c(
                     "uni-view",
                     {
-                      class: _vm._$g(43, "c"),
-                      attrs: { _i: 43 },
+                      class: _vm._$g(53, "c"),
+                      attrs: { _i: 53 },
                       on: {
                         touchstart: function ($event) {
                           return _vm.$handleViewEvent($event)
@@ -643,35 +737,35 @@ var render = function () {
                     [
                       _c(
                         "uni-view",
-                        { class: _vm._$g(44, "c"), attrs: { _i: 44 } },
+                        { class: _vm._$g(54, "c"), attrs: { _i: 54 } },
                         [
-                          _vm._$g(45, "i")
+                          _vm._$g(55, "i")
                             ? _c("v-uni-image", {
-                                staticClass: _vm._$g(45, "sc"),
+                                staticClass: _vm._$g(55, "sc"),
                                 attrs: {
-                                  src: _vm._$g(45, "a-src"),
+                                  src: _vm._$g(55, "a-src"),
                                   mode: "widthFix",
-                                  _i: 45,
+                                  _i: 55,
                                 },
                               })
                             : _vm._e(),
-                          _vm._$g(46, "i")
+                          _vm._$g(56, "i")
                             ? _c("v-uni-image", {
-                                staticClass: _vm._$g(46, "sc"),
+                                staticClass: _vm._$g(56, "sc"),
                                 attrs: {
-                                  src: _vm._$g(46, "a-src"),
+                                  src: _vm._$g(56, "a-src"),
                                   mode: "widthFix",
-                                  _i: 46,
+                                  _i: 56,
                                 },
                               })
                             : _vm._e(),
-                          _vm._$g(47, "i")
+                          _vm._$g(57, "i")
                             ? _c("v-uni-image", {
-                                staticClass: _vm._$g(47, "sc"),
+                                staticClass: _vm._$g(57, "sc"),
                                 attrs: {
-                                  src: _vm._$g(47, "a-src"),
+                                  src: _vm._$g(57, "a-src"),
                                   mode: "widthFix",
-                                  _i: 47,
+                                  _i: 57,
                                 },
                               })
                             : _vm._e(),
@@ -688,14 +782,14 @@ var render = function () {
                         {
                           name: "show",
                           rawName: "v-show",
-                          value: _vm._$g(48, "v-show"),
-                          expression: "_$g(48,'v-show')",
+                          value: _vm._$g(58, "v-show"),
+                          expression: "_$g(58,'v-show')",
                         },
                       ],
-                      staticClass: _vm._$g(48, "sc"),
-                      attrs: { _i: 48 },
+                      staticClass: _vm._$g(58, "sc"),
+                      attrs: { _i: 58 },
                     },
-                    [_vm._v("Hold to Talk")]
+                    [_vm._v("长按 讲话")]
                   ),
                   _c(
                     "uni-view",
@@ -704,14 +798,14 @@ var render = function () {
                         {
                           name: "show",
                           rawName: "v-show",
-                          value: _vm._$g(49, "v-show"),
-                          expression: "_$g(49,'v-show')",
+                          value: _vm._$g(59, "v-show"),
+                          expression: "_$g(59,'v-show')",
                         },
                       ],
-                      staticClass: _vm._$g(49, "sc"),
-                      attrs: { _i: 49 },
+                      staticClass: _vm._$g(59, "sc"),
+                      attrs: { _i: 59 },
                     },
-                    [_vm._v("Release and Send")]
+                    [_vm._v("松开 发送")]
                   ),
                 ],
                 1
@@ -724,147 +818,147 @@ var render = function () {
       ),
       _c(
         "uni-popup",
-        { ref: "popup", attrs: { _i: 50 } },
+        { ref: "popup", attrs: { _i: 60 } },
         [
           _c(
             "uni-view",
-            { staticClass: _vm._$g(51, "sc"), attrs: { _i: 51 } },
+            { staticClass: _vm._$g(61, "sc"), attrs: { _i: 61 } },
             [
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "7", _i: 52 },
+                  attrs: { type: "default", "data-index": "7", _i: 62 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Focus To Face")]
+                [_vm._v("切换到面部")]
               ),
               _c("uni-view", {
-                staticClass: _vm._$g(53, "sc"),
+                staticClass: _vm._$g(63, "sc"),
                 staticStyle: {
                   width: "100%",
                   height: "1px",
                   "background-color": "#3a3a3a",
                 },
-                attrs: { _i: 53 },
+                attrs: { _i: 63 },
               }),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "8", _i: 54 },
+                  attrs: { type: "default", "data-index": "8", _i: 64 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Focus To Body")]
+                [_vm._v("切换到身体")]
               ),
               _c("uni-view", {
-                staticClass: _vm._$g(55, "sc"),
+                staticClass: _vm._$g(65, "sc"),
                 staticStyle: {
                   width: "100%",
                   height: "1px",
                   "background-color": "#3a3a3a",
                 },
-                attrs: { _i: 55 },
+                attrs: { _i: 65 },
               }),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "1", _i: 56 },
+                  attrs: { type: "default", "data-index": "1", _i: 66 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Play Video1")]
+                [_vm._v("播放视频1")]
               ),
               _c("uni-view", {
-                staticClass: _vm._$g(57, "sc"),
+                staticClass: _vm._$g(67, "sc"),
                 staticStyle: {
                   width: "100%",
                   height: "1px",
                   "background-color": "#3a3a3a",
                 },
-                attrs: { _i: 57 },
+                attrs: { _i: 67 },
               }),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "2", _i: 58 },
+                  attrs: { type: "default", "data-index": "2", _i: 68 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Play Video2")]
+                [_vm._v("播放视频2")]
               ),
               _c("uni-view", {
-                staticClass: _vm._$g(59, "sc"),
+                staticClass: _vm._$g(69, "sc"),
                 staticStyle: {
                   width: "100%",
                   height: "1px",
                   "background-color": "#3a3a3a",
                 },
-                attrs: { _i: 59 },
+                attrs: { _i: 69 },
               }),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", "data-index": "3", _i: 60 },
+                  attrs: { type: "default", "data-index": "3", _i: 70 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Play Background")]
+                [_vm._v("切换到背景")]
               ),
               _c("uni-view", {
-                staticClass: _vm._$g(61, "sc"),
+                staticClass: _vm._$g(71, "sc"),
                 staticStyle: {
                   width: "100%",
                   height: "1px",
                   "background-color": "#3a3a3a",
                 },
-                attrs: { _i: 61 },
+                attrs: { _i: 71 },
               }),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", _i: 62 },
+                  attrs: { type: "default", _i: 72 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Reset Background")]
+                [_vm._v("重置背景")]
               ),
             ],
             1
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(63, "sc"), attrs: { _i: 63 } },
+            { staticClass: _vm._$g(73, "sc"), attrs: { _i: 73 } },
             [
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", _i: 64 },
+                  attrs: { type: "default", _i: 74 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("Cancel")]
+                [_vm._v("取消")]
               ),
             ],
             1
@@ -874,20 +968,20 @@ var render = function () {
       ),
       _c(
         "uni-popup",
-        { ref: "popupWSS", attrs: { _i: 65 } },
+        { ref: "popupWSS", attrs: { _i: 75 } },
         [
           _c(
             "uni-view",
-            { staticClass: _vm._$g(66, "sc"), attrs: { _i: 66 } },
+            { staticClass: _vm._$g(76, "sc"), attrs: { _i: 76 } },
             [
               _c("v-uni-input", {
                 attrs: {
                   type: "text",
                   name: "",
                   id: "",
-                  value: _vm._$g(67, "a-value"),
+                  value: _vm._$g(77, "a-value"),
                   placeholder: "wss://**.**.***.**",
-                  _i: 67,
+                  _i: 77,
                 },
                 on: {
                   input: function ($event) {
@@ -898,53 +992,53 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "warn", plain: "true", _i: 68 },
+                  attrs: { type: "warn", plain: "true", _i: 78 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("disconnect")]
+                [_vm._v("断开连接")]
               ),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "default", plain: "true", _i: 69 },
+                  attrs: { type: "default", plain: "true", _i: 79 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("cancel")]
+                [_vm._v("取消")]
               ),
               _c(
                 "v-uni-button",
                 {
-                  attrs: { type: "primary", plain: "true", _i: 70 },
+                  attrs: { type: "primary", plain: "true", _i: 80 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
                     },
                   },
                 },
-                [_vm._v("connect")]
+                [_vm._v("连接")]
               ),
               _c(
                 "uni-view",
-                { staticStyle: { "margin-top": "20rpx" }, attrs: { _i: 71 } },
+                { staticStyle: { "margin-top": "20rpx" }, attrs: { _i: 81 } },
                 [
                   _c(
                     "v-uni-text",
                     {
                       staticStyle: { "margin-right": "20rpx" },
-                      attrs: { _i: 72 },
+                      attrs: { _i: 82 },
                     },
-                    [_vm._v("CN/EN")]
+                    [_vm._v("英文/中文")]
                   ),
                   _c("v-uni-switch", {
-                    attrs: { checked: _vm._$g(73, "a-checked"), _i: 73 },
+                    attrs: { checked: _vm._$g(83, "a-checked"), _i: 83 },
                     on: {
                       change: function ($event) {
                         return _vm.$handleViewEvent($event)
@@ -2023,7 +2117,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../../static/content
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, "\n.content {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: relative;\n\t/* align-items: center;\n\tjustify-content: center; */\n\twidth: 100vw;\n\theight: 100vh;\n\toverflow: hidden;\n\tbackground: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.01) 100%);\n\t/* background-color: ; */\n}\nuni-image {\n\tpointer-events: none !important;\n}\n.contentBg {\n\twidth: 100vw;\n\theight: 100vh;\n\tbackground: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n\tbackground-size: 100% 100%;\n\tposition: absolute;\n\tz-index: -1;\n}\n.custom {\n\twidth: 100vw;\n\theight: 100rpx;\n\toverflow: hidden;\n\tbackground-color: rgba(255, 255, 255, 0.8);\n\tdisplay: flex;\n\tflex-direction: row;\n\talign-items: center;\n\tjustify-content: space-between;\n\tpadding-top: 4vh;\n}\n.customLeft {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customMid {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customRight {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customLeft>uni-image {\n\twidth: 62rpx;\n\theight: 32rpx;\n\tmargin-left: 32rpx;\n}\n.customMid>uni-image {\n\twidth: 176rpx;\n\theight: 36rpx;\n}\n.customRight>uni-image {\n\twidth: 40rpx;\n\theight: 40rpx;\n\tmargin-right: 32rpx;\n}\n.tipsPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: #fff;\n\tborder-radius: 50%;\n\tmargin-left: 20rpx;\n}\n.redPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: red;\n\tborder-radius: 50%;\n}\n.greenPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: #17BA4D;\n\tborder-radius: 50%;\n}\n.optinoPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tborder-radius: 50%;\n\tmargin-right: 20rpx;\n}\n.optionBtn {\n\twidth: 96vw;\n\theight: auto;\n\toverflow: hidden;\n\tbackground-color: #202020;\n\tborder-radius: 20rpx;\n\tmargin: 0 auto 16rpx;\n}\n.optionBtn>uni-button {\n\tbackground-color: #202020;\n\tfont-size: 36rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tmargin-top: 2rpx;\n}\n.cannelBtn {\n\twidth: 96vw;\n\theight: auto;\n\toverflow: hidden;\n\tbackground-color: #202020;\n\tborder-radius: 20rpx;\n\tmargin: 0 auto 40rpx;\n}\n.cannelBtn>uni-button {\n\tbackground-color: #202020;\n\tfont-size: 36rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 500;\n\tcolor: #007AFF;\n\tmargin-bottom: 10rpx;\n}\n.main {\n\twidth: 100vw;\n\theight: 90vh;\n\toverflow: hidden;\n}\n.inputWav {\n\twidth: 100vw;\n\theight: 20vh;\n\t/* background-color: rgba(0,0,0,0.7); */\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0;\n\tcolor: #efefef;\n\ttext-align: center;\n}\n.inputBox {\n\twidth: 100vw;\n\theight: 100vh;\n}\n.inputTipsSlide {\n\t/* display: none; */\n\twidth: 100vw;\n\theight: 200rpx;\n\tposition: absolute;\n\ttop: -180rpx;\n\t/* left: 50%; */\n\t/* transform: translateX(-50%) translateY(-50%); */\n\ttext-align: center;\n\tfont-size: 31rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: bold;\n\tcolor: #FFFFFF;\n}\n.slideMain {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.slideMain>uni-image {\n\twidth: 40rpx;\n\theight: 72rpx;\n\tposition: absolute;\n\ttop: 20rpx;\n\t/*left: 50%;\n\ttransform: translateX(-50%); */\n}\n.inputBtnDefault {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: linear-gradient(135deg, #B54FE6, #439CFD);\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputBtnRecording {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: #282828;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIconBoxCannel {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: none;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIconBox {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: #FB496F;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIcon {\n\twidth: 55rpx;\n\theight: 75rpx;\n}\n.inputTipsHold {\n\twidth: 100vw;\n\theight: 46rpx;\n\tfont-size: 31rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: bold;\n\tcolor: #EFEFEF;\n\tline-height: 74rpx;\n\tpointer-events:none\n}\n.inputTipsRelease {\n\twidth: 100vw;\n\theight: 46rpx;\n\tfont-size: 25rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: 400;\n\tcolor: #A0A0A8;\n\tline-height: 74rpx;\n}\n.chat {\n\twidth: 90vw;\n\theight: 68vh;\n\toverflow: scroll;\n\tmargin: 20rpx auto 120rpx;\n}\n.userPart {\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\theight: auto;\n\toverflow: hidden;\n}\n.userPart .userPartList{\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: flex-end;\n}\n.userPartList .asring {\n\twidth: 178rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding:0 20rpx;\n\tbackground-color: #303030;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.userPartList .asring>uni-image{\n\tdisplay: block;\n\twidth: 100%;\n}\n.userPartList .headimg {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tbackground-color: #6A6A6A;\n\tborder-radius: 50%;\n}\n.userPartList .headimg>uni-image {\n\twidth: 70rpx;\n\theight: 70rpx;\n\tmargin-top: 10rpx;\n\tmargin-left: 5rpx;\n}\n.userPartList .triangle {\n\tborder: 10px solid transparent;\n\tborder-left-color: #303030;\n\twidth: 0;\n\theight: 0;\n\tmargin-top: 20rpx;\n}\n.userPartList .text {\n\twidth: 400rpx;\n\t/* min-height: 80rpx; */\n\toverflow: hidden;\n\tpadding: 25rpx;\n\tbackground-color: #303030;\n\tcolor: #fff;\n\tfont-size: 32rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPart {\n\twidth: 90vw;\n\tmin-height: 150rpx;\n\theight: auto;\n\tmargin-top: 20rpx;\n\toverflow: hidden;\n}\n.robotPart .robotPartList{\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: flex-start;\n}\n.robotPartList .headimg {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tbackground-color: #000;\n\tborder-radius: 50%;\n}\n.robotPartList .headimg>uni-image {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tborder-radius: 50%;\n/* \tmargin-top: 15rpx;\n\tmargin-left: 10rpx; */\n}\n.robotPartList .triangle {\n\tborder: 10px solid transparent;\n\tborder-right-color: #000;\n\twidth: 0;\n\theight: 0;\n\tmargin-top: 20rpx;\n}\n.robotPartList .thinking {\n\twidth: 178rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding:0 20rpx;\n\tbackground-color: #000;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPartList .thinking>uni-image{\n\tdisplay: block;\n\twidth: 100%;\n}\n.robotPartList .text {\n\twidth: auto;\n\tmax-width: 400rpx;\n\t/* min-height: 80rpx; */\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding: 26rpx;\n\tbackground-color: #000;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPartList .sort {\n\twidth: 96rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\t/* padding: 32rpx; */\n\tbackground-color: #202020;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\ttext-align: center;\n\tline-height: 92rpx;\n\t/* word-break: break-all; */\n}\n.popupWSSMain{\n\twidth: 90vw;\n\theight: 40vh;\n\tbackground-color: #fff;\n\tborder-radius: 20rpx;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.popupWSSMain>uni-input{\n\twidth: 80vw;\n\theight: 80rpx;\n\tmargin: 0 auto;\n\tborder: 1px solid #000;\n\tborder-radius: 10rpx;\n\tpadding: 5rpx;\n\tmargin: 20rpx;\n}\n.popupWSSMain>uni-button{\n\twidth: 80vw;\n\tmargin: 10rpx;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.content {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: relative;\n\t/* align-items: center;\n\tjustify-content: center; */\n\twidth: 100vw;\n\theight: 100vh;\n\toverflow: hidden;\n\tbackground: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.01) 100%);\n\t/* background-color: ; */\n}\nuni-image {\n\tpointer-events: none !important;\n}\n.contentBg {\n\twidth: 100vw;\n\theight: 100vh;\n\tbackground: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n\tbackground-size: 100% 100%;\n\tposition: absolute;\n\tz-index: -1;\n}\n.custom {\n\twidth: 100vw;\n\theight: 100rpx;\n\toverflow: hidden;\n\tbackground-color: rgba(255, 255, 255, 0.8);\n\tdisplay: flex;\n\tflex-direction: row;\n\talign-items: center;\n\tjustify-content: space-between;\n\tpadding-top: 4vh;\n}\n.customLeft {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customMid {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customRight {\n\theight: 100%;\n\tdisplay: flex;\n\talign-items: center;\n}\n.customLeft>uni-image {\n\twidth: 62rpx;\n\theight: 32rpx;\n\tmargin-left: 32rpx;\n}\n.customMid>uni-image {\n\twidth: 176rpx;\n\theight: 36rpx;\n}\n.customRight>uni-image {\n\twidth: 40rpx;\n\theight: 40rpx;\n\tmargin-right: 32rpx;\n}\n.tipsPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: #fff;\n\tborder-radius: 50%;\n\tmargin-left: 20rpx;\n}\n.redPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: red;\n\tborder-radius: 50%;\n}\n.greenPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tbackground-color: #17BA4D;\n\tborder-radius: 50%;\n}\n.optinoPoint{\n\twidth: 20rpx;\n\theight: 20rpx;\n\tborder-radius: 50%;\n\tmargin-right: 20rpx;\n}\n.optionBtn {\n\twidth: 96vw;\n\theight: auto;\n\toverflow: hidden;\n\tbackground-color: #202020;\n\tborder-radius: 20rpx;\n\tmargin: 0 auto 16rpx;\n}\n.optionBtn>uni-button {\n\tbackground-color: #202020;\n\tfont-size: 36rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tmargin-top: 2rpx;\n}\n.cannelBtn {\n\twidth: 96vw;\n\theight: auto;\n\toverflow: hidden;\n\tbackground-color: #202020;\n\tborder-radius: 20rpx;\n\tmargin: 0 auto 40rpx;\n}\n.cannelBtn>uni-button {\n\tbackground-color: #202020;\n\tfont-size: 36rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 500;\n\tcolor: #007AFF;\n\tmargin-bottom: 10rpx;\n}\n.main {\n\twidth: 100vw;\n\theight: 90vh;\n\toverflow: hidden;\n}\n.inputWav {\n\twidth: 100vw;\n\theight: 20vh;\n\t/* background-color: rgba(0,0,0,0.7); */\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0;\n\tcolor: #efefef;\n\ttext-align: center;\n}\n.inputBox {\n\twidth: 100vw;\n\theight: 100vh;\n}\n.inputTipsSlide {\n\t/* display: none; */\n\twidth: 100vw;\n\theight: 200rpx;\n\tposition: absolute;\n\ttop: -180rpx;\n\t/* left: 50%; */\n\t/* transform: translateX(-50%) translateY(-50%); */\n\ttext-align: center;\n\tfont-size: 31rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: bold;\n\tcolor: #FFFFFF;\n}\n.slideMain {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.slideMain>uni-image {\n\twidth: 40rpx;\n\theight: 72rpx;\n\tposition: absolute;\n\ttop: 20rpx;\n\t/*left: 50%;\n\ttransform: translateX(-50%); */\n}\n.inputBtnDefault {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: linear-gradient(135deg, #B54FE6, #439CFD);\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputBtnRecording {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: #282828;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIconBoxCannel {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: none;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIconBox {\n\twidth: 180rpx;\n\theight: 180rpx;\n\tbackground: #FB496F;\n\tborder-radius: 50%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n}\n.inputIcon {\n\twidth: 55rpx;\n\theight: 75rpx;\n}\n.inputTipsHold {\n\twidth: 100vw;\n\theight: 46rpx;\n\tfont-size: 31rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: bold;\n\tcolor: #EFEFEF;\n\tline-height: 74rpx;\n\tpointer-events:none\n}\n.inputTipsRelease {\n\twidth: 100vw;\n\theight: 46rpx;\n\tfont-size: 25rpx;\n\tfont-family: San Francisco Display;\n\tfont-weight: bold;\n\tcolor: #A0A0A8;\n\tline-height: 74rpx;\n}\n.chat {\n\twidth: 90vw;\n\theight: 68vh;\n\toverflow: scroll;\n\tmargin: 20rpx auto 120rpx;\n}\n.userPart {\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\theight: auto;\n\toverflow: hidden;\n}\n.userPart .userPartList{\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: flex-end;\n}\n.userPartList .asring {\n\twidth: 178rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding:0 20rpx;\n\tbackground-color: #303030;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.userPartList .asring>uni-image{\n\tdisplay: block;\n\twidth: 100%;\n}\n.userPartList .headimg {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tbackground-color: #6A6A6A;\n\tborder-radius: 50%;\n}\n.userPartList .headimg>uni-image {\n\twidth: 70rpx;\n\theight: 70rpx;\n\tmargin-top: 10rpx;\n\tmargin-left: 5rpx;\n}\n.userPartList .triangle {\n\tborder: 10px solid transparent;\n\tborder-left-color: #303030;\n\twidth: 0;\n\theight: 0;\n\tmargin-top: 20rpx;\n}\n.userPartList .text {\n\twidth: 400rpx;\n\t/* min-height: 80rpx; */\n\toverflow: hidden;\n\tpadding: 25rpx;\n\tbackground-color: #303030;\n\tcolor: #fff;\n\tfont-size: 32rpx;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPart {\n\twidth: 90vw;\n\tmin-height: 150rpx;\n\theight: auto;\n\tmargin-top: 20rpx;\n\toverflow: hidden;\n}\n.robotPart .robotPartList{\n\twidth: 90vw;\n\tmin-height: 80rpx;\n\tmargin-top: 20rpx;\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: flex-start;\n}\n.robotPartList .headimg {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tbackground-color: #000;\n\tborder-radius: 50%;\n}\n.robotPartList .headimg>uni-image {\n\twidth: 80rpx;\n\theight: 80rpx;\n\tborder-radius: 50%;\n/* \tmargin-top: 15rpx;\n\tmargin-left: 10rpx; */\n}\n.robotPartList .triangle {\n\tborder: 10px solid transparent;\n\tborder-right-color: #000;\n\twidth: 0;\n\theight: 0;\n\tmargin-top: 20rpx;\n}\n.robotPartList .thinking {\n\twidth: 178rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding:0 20rpx;\n\tbackground-color: #000;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPartList .thinking>uni-image{\n\tdisplay: block;\n\twidth: 100%;\n}\n.robotPartList .text {\n\twidth: auto;\n\tmax-width: 400rpx;\n\t/* min-height: 80rpx; */\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\tpadding: 26rpx;\n\tbackground-color: #000;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\tline-height: 40rpx;\n\t/* word-break: break-all; */\n}\n.robotPartList .sort {\n\twidth: 96rpx;\n\theight: 92rpx;\n\t/* border-radius: 10rpx; */\n\toverflow: hidden;\n\t/* padding: 32rpx; */\n\tbackground-color: #202020;\n\tfont-size: 15px;\n\tfont-family: PingFang SC;\n\tfont-weight: 400;\n\tcolor: #FFFFFF;\n\ttext-align: center;\n\tline-height: 92rpx;\n\t/* word-break: break-all; */\n}\n.popupWSSMain{\n\twidth: 90vw;\n\theight: 40vh;\n\tbackground-color: #fff;\n\tborder-radius: 20rpx;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n}\n.popupWSSMain>uni-input{\n\twidth: 80vw;\n\theight: 80rpx;\n\tmargin: 0 auto;\n\tborder: 1px solid #000;\n\tborder-radius: 10rpx;\n\tpadding: 5rpx;\n\tmargin: 20rpx;\n}\n.popupWSSMain>uni-button{\n\twidth: 80vw;\n\tmargin: 10rpx;\n}\n\n\n", ""]);
 // Exports
 module.exports = exports;
 
