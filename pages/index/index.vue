@@ -52,7 +52,7 @@
 				<view class="robotPart" v-show="showRobotPart">
 					<view v-show="isInvalidAsk" class="robotPartList">
 						<view class="headimg">
-							<image src="../../static/icon-robot2.jpg" mode=""></image>
+							<image src="../../static/icon-robot1.png" mode=""></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="text">
@@ -62,7 +62,7 @@
 					</view>
 					<view v-show="isNetworkError" class="robotPartList">
 						<view class="headimg">
-							<image src="../../static/icon-robot2.jpg" mode=""></image>
+							<image src="../../static/icon-robot1.png" mode=""></image>
 						</view>
 						<view class="triangle"></view>
 						<view class="text">
@@ -193,6 +193,7 @@
 				isInvalidAsk:false,
 				isNetworkError:false,
 				isAsring:false,
+				isUpdataRecorder:false,
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://yjwpv79rnsupshsh3.neiwangyun.net',
@@ -270,6 +271,10 @@
 				that.Path = res.tempFilePath;
 				// console.log(that.Path,that.langugeType)
 				// console.log(res.tempFilePath);
+				if(!that.isUpdataRecorder){
+					console.log("取消上传");
+					return;
+				}
 				uni.saveFile({
 				  tempFilePath: that.Path,
 				  success: function (res) {
@@ -382,16 +387,17 @@
 					that.robotMsgList = that.robotMsgList.concat(answerList);
 				}
 			})
+			// 监听 WebSocket 关闭
+			uni.onSocketClose(function(){
+				that.tipsPoint = false;
+			})
 
 
 		},
 		beforeDestroy() {
 			// closeWebsocketPotassium();
 			
-			// 监听 WebSocket 关闭
-			uni.onSocketClose(function(){
-				that.tipsPoint = false;
-			})
+
 		},
 		methods: {
 			clickShowPopupWSS(){
@@ -599,8 +605,11 @@
 					that.isAsring = false;
 					// console.info('进来了？？？');
 					that.isLangTap = false;
+					that.isUpdataRecorder = true;
 				} else {
 					// 此时松手后响应的是取消录音
+					that.recorder.stop();
+					that.isUpdataRecorder = false;
 					console.info('取消录音');
 				}
 
