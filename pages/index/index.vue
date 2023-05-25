@@ -201,7 +201,7 @@
 				// WSSUrl:'wss://54774dq657.zicp.fun',
 				
 				options : {
-					duration:6000,
+					duration:60000,
 					sampleRate:16000,
 					format: "mp3"
 				},
