@@ -191,16 +191,17 @@
 				isInvalidAsk:false,
 				isNetworkError:false,
 				isAsring:false,
+				isUpdataRecorder:false,
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://yjwpv79rnsupshsh3.neiwangyun.net',
 				// WSSUrl:'ws://10.10.10.247:3000',
-				WSSUrl:'ws://192.168.0.250:3000',
+				WSSUrl:'ws://192.168.100.106:3000',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://54774dq657.zicp.fun',
 				
 				options : {
-					duration:60000,
+					duration:6000,
 					sampleRate:16000,
 					format: "mp3"
 				},
@@ -268,6 +269,10 @@
 				that.Path = res.tempFilePath;
 				// console.log(that.Path,that.langugeType)
 				// console.log(res.tempFilePath);
+				if(!that.isUpdataRecorder){
+					console.log("取消上传");
+					return;
+				}
 				uni.saveFile({
 				  tempFilePath: that.Path,
 				  success: function (res) {
@@ -381,16 +386,17 @@
 					that.robotMsgList = that.robotMsgList.concat(answerList);
 				}
 			})
+			// 监听 WebSocket 关闭
+			uni.onSocketClose(function(){
+				that.tipsPoint = false;
+			})
 
 
 		},
 		beforeDestroy() {
 			// closeWebsocketPotassium();
 			
-			// 监听 WebSocket 关闭
-			uni.onSocketClose(function(){
-				that.tipsPoint = false;
-			})
+
 		},
 		methods: {
 			clickShowPopupWSS(){
@@ -561,7 +567,7 @@
 				let that = this;
 
 				// that.clientX = e.changedTouches[0].clientX; //手指按下时的X坐标
-				// that.clientY = e.changedTouches[0].clientY; //手指按下时的Y坐标
+				that.clientY = e.changedTouches[0].clientY; //手指按下时的Y坐标
 				// if(that.isLangTap){
 				// navigator.getUserMedia({
 				// 	audio: true
@@ -597,10 +603,12 @@
 					that.recorder.stop();
 					that.showUserPart = true;
 					that.isAsring = false;
-					// console.info('进来了？？？');
 					that.isLangTap = false;
+					that.isUpdataRecorder = true;
 				} else {
 					// 此时松手后响应的是取消录音
+					that.recorder.stop();
+					that.isUpdataRecorder = false;
 					console.info('取消录音');
 				}
 
