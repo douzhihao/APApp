@@ -152,7 +152,7 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
 window.__uniConfig = {
   "window": {
     "navigationStyle": "custom",
-    "navigationBarTitleText": "ASIA-POTASH",
+    "navigationBarTitleText": "数字经济",
     "enablePullDownRefresh": false
   },
   "darkmode": false

@@ -197,8 +197,8 @@
 				// WSSUrl:'wss://i7u3629729.goho.co',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://yjwpv79rnsupshsh3.neiwangyun.net',
-				WSSUrl:'ws://10.10.130.17:3000',
-				// WSSUrl:'ws://192.168.0.250:3000',
+				// WSSUrl:'ws://10.10.130.17:3000',
+				WSSUrl:'ws://192.168.100.192:3000',
 				// WSSUrl:'wss://i25817465a.imdo.co',
 				// WSSUrl:'wss://54774dq657.zicp.fun',
 				
@@ -225,6 +225,10 @@
 					console.log(res);
 				}
 			});
+			uni.showLoading({
+				title:"加载中"
+			})
+			uni.hideLoading();
 			// try {
 			// 	const res = uni.getStorageInfoSync();
 			// 	console.log(res.keys);
@@ -252,6 +256,7 @@
 		},
 		mounted() {
 			let that = this;
+			let pongTimer;
 			
 			that.innerAudioContext = uni.createInnerAudioContext();
 			that.innerAudioContext.autoplay = true;
@@ -352,15 +357,16 @@
 				that.tipsPoint = true;
 				that.socketOpen = true;
 				let socktTimer = setInterval(function(){
-					console.log('ping',that.isInvalidAsk);
+					console.log('ping');
 					that.sendSocketMessage(JSON.stringify({ talk_data: 'ping' }))
-				},10000)
+				},7000)
 			});
 			// 监听 WebSocket 错误
 			uni.onSocketError(function (res) {
 			  console.log('WebSocket连接打开失败，请检查！--------------');
 				that.tipsPoint = false;
 				that.socketOpen = false;
+				uni.hideLoading();
 			});
 			
 			// 发送 WebSocket 消息
@@ -386,6 +392,34 @@
 					answerList.unshift(_msg.answer);
 					that.robotMsgList = that.robotMsgList.concat(answerList);
 				}
+				if(_msg.talk_data){
+					clearInterval(pongTimer);
+					let _cd = 10;
+					pongTimer = setInterval(function(){
+						// console.log('收到服务器内容：' + res.data);
+						console.log('-------心跳cd--'+_cd+'------');
+						_cd--;
+						if(_cd == 0){
+							_cd = 0;
+							clearInterval(pongTimer);
+							//  WebSocket 关闭
+							uni.closeSocket({
+								success: function(res){
+									that.tipsPoint = false;
+								}
+							})
+							uni.hideLoading();
+							uni.showToast({
+								title: '请检查网络',
+								icon:'none',
+								duration: 2000
+							});
+							console.log('-------长时间未收到心跳stop------');
+						}
+						// uni.hideLoading();
+					},1000)
+				}
+
 			})
 			// 监听 WebSocket 关闭
 			uni.onSocketClose(function(){
@@ -417,7 +451,7 @@
 					that.tipsPoint = false;
 				},1000)
 				// closeWebsocketPotassium();
-				// 监听 WebSocket 关闭
+				//  WebSocket 关闭
 				uni.closeSocket({
 					success: function(res){
 						that.tipsPoint = false;
@@ -616,6 +650,7 @@
 				that.recordStatus = 0;
 				that.recording = false;
 				that.cancelRecord = false;
+				uni.hideLoading();
 				// that.isLangTap = false;
 
 

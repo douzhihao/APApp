@@ -7,7 +7,7 @@
 	],
 	"globalStyle": {
 		"navigationStyle": "custom",
-		"navigationBarTitleText": "ASIA-POTASH",
+		"navigationBarTitleText": "数字经济",
 		"enablePullDownRefresh": false
 	},
 	"uniIdRouter": {}
